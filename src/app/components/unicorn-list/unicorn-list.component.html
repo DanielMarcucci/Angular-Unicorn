@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-4" *ngFor="let unicorn of unicorns">
+    <div class="card text-center">
+      <div class="card-header">
+        {{unicorn.title}}
+      </div>
+      <div class="card-body">
+        <p>{{unicorn.body}}</p>
+        <h1>{{unicorn.id}}</h1>
+        <h4>User Id: {{unicorn.userId}}</h4>
+        <a class="btn btn-success m-1" [routerLink]="['/unicorns/edit', unicorn.id]">Editar</a>
+        <button class="btn btn-danger m-1" (click)="deleteUnicorn(unicorn.id)">Borrar</button>
+      </div>
+    </div>
+  </div>
+</div>
